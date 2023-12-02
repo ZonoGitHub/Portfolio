@@ -1,0 +1,26 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block content %}
+  <h2>Profil de {{ user.username }}</h2>
+  <p>Nom d'utilisateur : {{ user.username }}</p>
+  <p>Adresse e-mail : {{ user.email }}</p>
+  <!-- Ajoutez d'autres informations de profil ici -->
+  <h3>Historique de lecture</h3>
+  <ul>
+    {% for entry in user.readinghistory_set.all %}
+      <li>{{ entry.book.title }} (Début : {{ entry.date_started }}, Fin : {{ entry.date_finished }})</li>
+    {% empty %}
+      <li>Aucun livre dans l'historique de lecture.</li>
+    {% endfor %}
+  </ul>
+  <h3>Évaluations</h3>
+  <ul>
+    {% for rating in user.bookrating_set.all %}
+      <li>Titre du livre : {{ rating.book.title }}</li>
+      <p>Évaluation : {{ rating.rating }}</p>
+      <p>Commentaire : {{ rating.review }}</p>
+    {% empty %}
+      <li>Aucune évaluation disponible.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

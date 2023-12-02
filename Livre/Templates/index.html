@@ -1,0 +1,210 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+Accueil
+{% endblock %}
+<!--<div class="tex-warning bg-dark " style="border: solid 3px;font-size: 24px; color:white; margin-top:15px; text-align: center;">
+LIVRES NUMERIQUES BURKINA
+</div>-->
+{% load static %}
+
+
+{% block content %}
+<div id="toastBox"> </div>
+
+<!-- Modal d'ajout de livre -->     
+
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-header">
+
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+              </button>
+
+              <h4 class="modal-title" id="myModalLabel">Edit Livre></h4></div>
+    <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-edit"></span>Update</button>
+          </div>
+      </div>
+</div>
+
+    <div class="container d-flex " style="margin-bottom: 1px; margin-left: 15rem;">
+      <div class="card-header">
+        <form class="row row-cols-auto g-1">
+          <div class="col">
+            <input class="form-control" type="search" id="searchField" name="rechercher" placeholder="Rechercher..." />	
+          </div>
+          <div class="col">
+            <button class="btn btn-success">Rechercher</button>	
+          </div>
+          {% if user.is_staff %}
+          <div class="col text-right">
+            <a href="{% url 'upload' %} " class="btn btn-primary">Ajouter livre</a>
+          </div>
+          {% endif %}
+        </form>
+      </div>
+      </div>
+
+
+
+
+      <div class="container text-center text-light mt-3 mb-3 " style="width: 100%; height: 5rem;font-family: Verdana, Geneva, Tahoma, sans-serif ; font-size: 3vw;;">
+        Explorez tous les catégories des livres
+      </div>
+
+      <div class="container mt-3 d-flex" >
+        <div class="d-flex" style="width: 100%;">
+
+          <div class="col-sm-3 mt-3  " style="height: 50rem; width: 30%; margin-right: 2vw; font-size: 1.5vw;">
+                  <ul class="card text-center " style=" width: 100%; height: 100%; overflow: scroll;">
+                    {% if cat %}
+                    {% for cat in cat %}
+                    <li class="m-2 " style="list-style-type: none" > <a href="{% url 'apercu' cat.id %} ">  {{ cat.intitule}}</a> </li>
+                   {% endfor %}
+                   {% endif %}
+                  </ul>
+                </div>
+            
+            
+
+                <div class="grid-row">
+                  {% if list_livre %}
+                  {% for livre in page_obj %}
+                  <div class="grid d-flex m-2 mb-5">
+                  <div class="row mr-5">
+                    <a href="{% url 'afficher_detail' livre.id %}" >
+                    <img  src="{{ livre.couverture.url }}" height="270vh" width="250vw">
+                  </a>
+                  </div>
+                  {% if livre.prix %}
+                  <div class="d-block text-light pt-4" style="font-size: 1.5vw; text-align: flex-end;">
+                     <div class=" mb-4 "> <span style="font-weight: 1000;" >{{livre.titre}}</span>
+                     <p style="color: #e8f507;"><strong>Prix :</strong> {{ livre.prix }} €</p></div>
+                     <div> <a href="#"  id="acheter" class="btn btn-outline-warning mb-4 telecharge text-center" >Acheter </a></div>
+                     <div> <a class="btn btn-outline-success btn-sm  mb-4" href="{% url 'afficher_pdf' livre.id %}">Voir le PDF</a></div>
+                    {% else %}
+                    <div class="d-block text-light pt-4" style="font-size: 1.5vw; text-align: flex-end;">
+                      <div class=" mb-4 "> <span style="font-weight: 1000;"  >{{livre.titre}}</span>
+                      <p style="color: #e8f507;"><strong>Prix :</strong> Gratuit</p></div>
+                   <div> <a href="{% url 'telecharger' livre.id %}"  id="telecharge" class="btn btn-outline-warning mb-4 telecharge text-center" onclick="toaster()" >Telecharger </a></div>
+                    <div> <a class="btn btn-outline-success btn-sm  mb-4" href="{% url 'afficher_pdf' livre.id %}">Voir le PDF</a></div>
+                     <div><a  id="commanderBook" class="btn btn-outline-primary p-1  "  href="#"  data-livreid="{{ livre.id }}" onclick="commander(this.dataset.livreid)">Commander &nbsp; <i class='bx bx-shopping-bag bx-tada' style='color:#e8f507;font-size: 1.4rem;' ></i></a></div>
+                     {% endif %}
+                    </div>
+                </div>
+                  {% endfor %}
+                  {% else %}
+                  <div class="alert alert-warning text-muted text-center " style=" width: 100%; font-size:2vw"> Aucun livre n'est disponible pour le moment !</div>
+                  {% endif %}
+                </div>
+
+                     
+                  </div>
+                  </div>
+                        
+                
+            <div id="confirmationModal" class="modal1">
+              <div class="modal-content1">
+                <p style="margin-bottom: 10px; font-weight: 500;">Voulez-vous vraiment passer cette commande ?</p>
+                <button class="btn btn-primary" id="confirmButton" style="margin-right: 5rem;">Confirmer</button>
+                <button class="btn btn-danger " id="cancelButton">Annuler</button>
+              </div>
+            </div>
+
+
+            <div id="felicitaioncommande" class="modal1">
+              <div class="modal-content1">
+                <p style="margin-bottom: 10px; font-weight: 500;"><i class="fa-solid fa-circle-check  " style=" font-size: 1.5rem; color:green"></i>&nbsp;Felicitation ! Votre commande a été traité !</p>
+                <button class="btn btn-success " id="cancelfelicit" style="padding:5px 20px 5px 20px ;">Ok</button>
+              </div>
+            </div>
+
+
+
+
+            <div id="commandespeciale" class="modal-fade">
+              <div class="modal-content">
+                <div class="modal-header" style="font-weight: 800; text-align: center;">
+                  Vous cherchez en vain un livre spécial sur le site?<br>
+                  Veuillez laisse les informations du livre
+                  <button type="button" class="close" id="close" aria-hidden="true">&times;
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="{% url 'specialcommand' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="d-flex">
+                      <label >Nom et Prenom<span class=" text-danger">*</span></label>
+                      <input type="text" class="form-control form-cont" name="nomprenom" required>
+                    </div>
+                  <div class="d-flex">
+                    <label >E-mail<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control form-cont" name="email" required>
+                  </div> 
+                  <div class="d-flex">
+                    <label >Titre du livre<span class=" text-danger">*</span></label>
+                    <input type="text" class="form-control form-cont" name="titre" required>
+                  </div>
+                  <div class="d-flex">
+                    <label >Auteur du livre<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-cont" name="auteur" required>
+                  </div>
+                  <div class="d-flex">
+                    <label >Date de publication<span class="text-danger">(Facultatif)</span></label>
+                    <input type="date" class="form-control form-cont" name="date" >
+                  </div>
+                  <div class="d-flex">
+                    <label >Image du livre <span class="text-danger">(Facultatif)</span></label>
+                    <input type="file" class="form-control form-cont"  name="couverture" >
+                  </div>
+                </div>
+                <div class="modal-footer" style="padding-top: 0px; padding-bottom:0px;"> 
+                  <button class="btn btn-danger"  id="Annulespeciale">Annuler</button>
+                  <button class="btn btn-primary" type="submit" style="margin-left: 5rem;">Envoyer</button>
+                </form>
+                </div>
+              </div>
+            </div>
+
+
+
+         
+
+          <div class="pagination-container" style="font-style: italic; font-family: Arial, Helvetica, sans-serif; color: lightgoldenrodyellow;">
+            <div class="">
+            Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}
+            </div>
+            <ul class="pagination align-right float-right mr-auto">
+            {% if page_obj.has_previous %}
+              <li {% if page_obj.number == 1 %} class="page-item active" {% endif %} > <a class ="page-link" href="?page=1">&laquo;1</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{page_obj.previous_page_number }}">Précedant</a></li>
+            {% endif %}
+            
+            {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number }}">Suivant</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{page_obj.paginator.num_pages }}">{{page_obj.paginator.num_pages }}</a></li>
+            {% endif %}
+            </ul>
+            </div> 
+
+  {% endblock %}
+           
+  <script>
+    function retourner() {
+         window.history.back()
+      }
+      </script>
+
+
+
+         
+
+
+
+
+ 

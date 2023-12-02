@@ -1,0 +1,10 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+<div class="notification">
+    <span class="message">{{ notification.message }}</span>
+    <span class="timestamp">{{ notification.timestamp }}</span>
+    <button class="mark-as-read" data-notification-id="{{ notification.id }}">Marquer comme lu</button>
+</div>
+
+{% endblock %}

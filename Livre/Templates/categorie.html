@@ -1,0 +1,104 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="float-none mt-5 mb-5">    
+    <fieldset style="margin-bottom: 1px; text-align: center; "><h1><b class="text-light">Tous Les Categories Des Livres</b></h1></fieldset>     
+      </div>
+
+      <div class="container " style="margin-bottom: 1px;">
+        <div class="card-header">
+          <form class="row row-cols-auto g-1">
+            <div class="col">
+              <input class="form-control" type="search" id="searchField" name="rechercher" placeholder="Rechercher..." />	
+            </div>
+            <div class="col">
+              <button class="btn btn-success">Rechercher</button>	
+            </div>
+            <div class="col text-right">
+              <a  class="btn btn-primary" href ="{% url 'catestore' %}">Ajouter uen categorie</a>
+            </div>
+          </form>
+        </div>
+        <div class="app-table">
+        <table class="table table-striped text-light" >  
+          <thead style="border: solid 1px; background-color: rgb(226, 99, 48)">   
+                  <tr>
+                      <th>ID</th>
+                      <th>Intitulé</th>
+                      <th colspan="2" class="text-center">Actions</th>    
+                  </tr>
+          </thead>    
+     
+      <tbody class="text-light"> 
+        {% if cat %}
+            {% for cat in page_obj %}
+            <tr>
+                     <td>{{cat.id}}</td>
+                    <td>{{cat.intitule}}</td>
+                    {% if user.is_staff %}
+                     <td>  
+                         <a href="{% url 'editcategorie' cat.id %}" >Edit </a>
+                     </td>
+                     <td>
+                         <a href="{ url 'delete' {cat.id}}" > Delete</a>
+                    </td>
+                    {% endif %}
+            </tr>
+          {% endfor %}
+          {% else %}
+          <tr><td colspan="3" class="text-light" style="font-size: 30px;"> pas d'items</td></tr>
+          {% endif %}
+      </tbody>  
+       </table>
+        </div> 
+
+
+
+        <div class="table-output">
+          <table class="table table-striped text-light" >  
+            <thead style="border: solid 1px; background-color: rgb(226, 99, 48)">   
+                    <tr>
+                        <th>ID</th>
+                        <th>Intitulé</th>   
+                    </tr>
+            </thead>    
+       
+        <tbody class="table-body" >
+        </tbody>
+          </table>
+      </div>
+
+      <p class="no-result" style="display: none;"> No results</p>
+
+      </div>
+
+      <div class="pagination-container" style="font-style: italic; font-family: Arial, Helvetica, sans-serif; color: lightgoldenrodyellow;">
+        <div class="">
+        Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}
+        </div>
+        <ul class="pagination align-right float-right mr-auto">
+        {% if page_obj.has_previous %}
+          <li {% if page_obj.number == 1 %} class="page-item active" {% endif %} > <a class ="page-link" href="?page=1">&laquo;1</a></li>
+          <li class="page-item"><a class="page-link" href="?page={{page_obj.previous_page_number }}">Précedant</a></li>
+        {% endif %}
+        
+        {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number }}">Suivant</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{page_obj.paginator.num_pages }}">{{page_obj.paginator.num_pages }}</a></li>
+        {% endif %}
+        </ul>
+        </div> 
+
+        
+        <script  src="{% static 'js/searchcategorie.js' %}"></script>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+{% block title %}
+
+    {{livre.titre}}
+{% endblock %}
+
+{% block header %}
+<div class="card-header text-center text-light mt--4" style="width: 100%; height: 50px; font-size: 2vw;" >
+        <b  style="font-family: 'Gill Sans';">{{livre.titre}}  </b>  &nbsp;&nbsp;&nbsp;&nbsp;  Auteur : {{livre.auteur }}</b>
+    </div>
+        {% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-2">
+    <iframe src="{{ livre.pdf.url }}" width="100%" height="600" frameborder="0"></iframe>
+</div>
+
+<!-- <object data="{{ livre.pdf.url }}" type="application/pdf" width="800" height="600">
+    <p>Votre navigateur ne prend pas en charge l'affichage de PDF. Vous pouvez le télécharger à la place.</p>
+</object>  -->
+{% endblock %}

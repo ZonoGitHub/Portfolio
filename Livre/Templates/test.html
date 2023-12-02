@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Mon Site de Livres</title>
+    <link reel="stylesheet" href="{% static 'css/profile.css'}">
+    {% load static %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .book {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .book img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+.dct-footer-main-background {
+    background-color: #dcdcdc;
+}
+.set-border-box, .set-border-box * {
+    box-sizing: border-box;
+}
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.dct-footer-container {
+    padding: 0;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+}
+.wrapper {
+    min-width: 996px;
+    font-size: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color: #f4f4f4;">Mon Site de Livres</h1>
+    </header>
+
+    <section>
+        <h2>Nouveautés</h2>
+
+        <div class="book">
+            <img src="livre1.jpg" alt="Livre 1">
+            <div class="book-info">
+                <h3>Titre du Livre 1</h3>
+                <p>Auteur: Nom de l'auteur</p>
+                <p>Description courte du livre.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="book">
+            <img src="livre2.jpg" alt="Livre 2">
+            <div class="book-info">
+                <h3>Titre du Livre 2</h3>
+                <p>Auteur: Nom de l'auteur</p>
+                <p>Description courte du livre.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+        </div>
+        <!-- Ajoutez d'autres livres selon vos besoins -->
+    </section>
+
+   <!--  <footer>
+        <p>&copy; 2023 Mon Site de Livres</p>
+    </footer> -->
+
+
+    <div class="dct-footer-line-wrapper dct-footer-main-background">
+        <div class="grid-row dct-footer-main-background dct-footer-newsletter-social-line dct-footer-secondary-color">
+            <div class="content-66 dct-footer-newsletter">
+                <div class="content-50">
+                    <span class="dct-icon-decitre hide-on-responsive"></span>	
+                    <div class="title"><span class="icon dct-icon-envelope"></span>Newsletter</div>
+                    Inscrivez-vous pour découvrir<br>toutes nos offres !
+                </div>
+                <div class="content-50">
+                    <form method="post" action="https://www.decitre.fr/newsletter/subscriber/new" class="dct-form">
+                        <input name="email" type="email" placeholder="Votre adresse e-mail" class="mailcheck-validator">
+                        <button type="submit" title="Inscription" class="submit trackme dct-button-flat-action" data-tracking-category="Inscription Newsletter" data-tracking-action="clic" data-tracking-label="Inscriptionnewsletterfooter">
+                            Je m'inscris
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="content-33">
+                <ul class="dct-footer-social-links">
+                        <li>
+                            <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-facebook" href="http://www.facebook.com/Decitre" target="_blank"><span class="icon dct-icon-facebook-square"></span></a>
+                        </li>
+                        <li>
+                            <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-twitter" href="http://twitter.com/Decitre/" target="_blank"><span class="icon dct-icon-twitter-square"></span></a>
+                        </li>
+                        <li>
+                            <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-instagram" href="http://instagram.com/librairiedecitre#" target="_blank"><span class="dct-icon-instagram"></span></a>
+                        </li>
+                        <li>
+                            <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-pinterest" href="http://pinterest.com/decitre/" target="_blank"><span class="icon dct-icon-pinterest-square"></span></a>
+                        </li>
+                        <li>
+                            <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-youtube" href="https://www.youtube.com/user/EvenementsDecitre" target="_blank"><span class="icon dct-icon-youtube-square"></span></a>
+                        </li>
+        
+                    </ul>		
+            </div>
+        </div>
+        </div>
+
+</body>
+</html>

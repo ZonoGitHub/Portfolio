@@ -1,0 +1,52 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+<div class="flex-container mb-3" >
+    <div class="row pt-5">
+      
+      <div class="flex-items" style="width: 35%; margin-left: 1px;">
+        <div class="card" style="height: 500px; margin-left: 15px;">
+          <ul>
+            <li>{{ categorie.intitule }} </li>
+          </ul>
+        </div>
+    </div>     
+                <div class="flex-items" style="margin-left:  20px;" >
+                  <div class="row">
+                  <div class="border-danger-subtle text-light">
+                    
+                    {%if livre %}
+                {% for livre in livre  %}
+                <ul class=" row " style="list-style-type: none;">
+                <li class="flex-items" >
+                    {% if livre.couverture %}
+                    <div class="image ">
+                      <img src="{{ livre.couverture.url}}" class="couverture" alt="livre.titre" style="width:200px ;height: 200px;">
+                    </div>
+                    {% else %}
+                    <div class="text-muted"style="width:200px ;height: 200px;">No couverture</div>
+                    {%  endif %}
+                </li>
+                <li class="col align-items-center" style="margin: 2px; align-self: end;">
+                  <span class="flex-items d-block mb-5" style="color: rgb(216, 184, 241); font-size:30px;">{{livre.titre}}</span>
+                  <span class="flex-items d-block mb-3">{{livre.description}}</span>
+                  <button class="btn btn-primary d-block flex-items d-block" href="#" style="margin-top: 10px;margin-bottom:5px;">Telecharger</button>
+                </li>
+                </ul>
+                    {% endfor  %}  
+                    {% else %} 
+                    <div class="text-light"style="height: 200px; font-size:30px">Aucun livre de catégorie {{ categorie.intitule }} trouvé <br>
+
+                    <span style="font-size: 12rem; font-weight: 100; text-align: center; margin-top: 2rem;"><i class='bx bx-sad bx-tada' style='color:#8a8181'  ></i></span>
+                  </div>
+                   {% endif %}
+                    
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

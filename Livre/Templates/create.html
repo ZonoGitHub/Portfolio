@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container  ">
+    <div class = "row">
+        <div class = "col-md-6 mt-5 mb-5 shadow">
+            <h3>Veuillez renseignez les champs</h3>
+            <form action="{% url 'store' %}" method="POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label>Titre du livre <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" name="titre"  name="titre" placeholder="Titre" required="required"/>	
+                    </div>
+                    <div class="mb-3">
+                        <label>Auteur <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text"  name="auteur" placeholder="auteur du livre" required="required">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Description <span class="text-danger">*</span></label>
+                        <textarea type="text" class="form-control" name="description" placeholder="description du livre" required="required"> </textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Choisir image de couverture <span class="text-danger">*</span></label>
+                        <input type="file" id="myFile"  name="couverture" placeholder="couverture" required="required" enctype="multipart/form-data ">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Choisir le livre <span class="text-danger">*</span></label>
+                        <input type="file" id="myFile" name="pdf" placeholder="pdf" required="required" enctype="multipart/form-data"> 
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-success" href="">Ajouter</button> 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

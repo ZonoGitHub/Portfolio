@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="text-center text-light mt-3 mb-3" style="font-size: 3vw; width: 100%;"><b>Inscrivez-vous à notre site pour bénéficier de nos offres</b></div>    
+<div class= "text-light text-center mb-3" id="registrer" style="width: 50%; float:none; overflow: hidden; box-shadow: lightgreen;">
+  <img src="{% static './fichier/logo.png' %}" class="logo" >
+  
+  <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="row">
+            <div class="col mt-2 p-0 " style="font-size: 1nw; "><b>{{ field.label_tag }}</b></div>
+            <div class=" col p-0" >{{ field }}</div>
+          </div>
+          {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <p class="alert alert-danger m-3">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+
+          {% endfor %}
+        <button class="btn btn-success m-3" type="submit">s'inscrire</button>       
+    </form>
+    <div>
+    <small>
+        <b>Déjà inscrit.e? </b>
+        <a class="btn btn-outline-success m-3 text-light" href="{% url 'login' %}">Se connecter</a>
+    </small>
+  </div>
+</div>
+{% endblock %}
+
+<!--{% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <p class="alert alert-danger">{{ error }}</p>
+            {% endfor %}
+        {% endif %}-->

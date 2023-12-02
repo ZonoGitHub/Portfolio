@@ -1,0 +1,69 @@
+{% extends "base2.html" %}
+ 
+ {% load static %}
+ {% block style %}
+ <link rel="stylesheet" href="{% static 'pdf_JS/web/viewer.css' %}">
+{% endblock %}
+
+{% block title %}
+Affiche un Livre PDF
+{% endblock %}
+
+{% block content %}
+<div class="container text-light">
+    <h1>{{ livre.titre }}</h1>
+      <p>Auteur : {{ livre.auteur }}</p>
+    <p>Description : {{ livre.description }}</p>
+ 
+ <div id="pdfViewer" class="text-light"> suis
+
+ </div>
+ 
+</div>
+<script src="{% static 'pdf_JS/build/pdf.js' %}"></script>
+<script src="{% static 'pdf_JS/web/viewer.js' %}"></script>
+
+<script>
+  // Chargement du PDF
+  var pdfUrl = "{{livre.pdf.url}}";
+
+  // Options de la visionneuse
+  var viewerOptions = {
+      container: document.getElementById('pdfViewer'),
+  };
+
+  // Chargement du PDF dans la visionneuse
+  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDocument) {
+      // Création de la visionneuse
+      var pdfViewer = new pdfjsViewer.PDFViewer(viewerOptions);
+      pdfViewer.setDocument(pdfDocument);
+
+      // Optionnel : Ajout des boutons de navigation
+      var pdfControl = new pdfjsViewer.PDFPageView({
+          container: document.getElementById('pdfViewer'),
+      });
+      pdfControl.setPdfViewer(pdfViewer);
+      pdfViewer.setPdfPageView(pdfControl);
+
+      // Chargement de la première page
+      pdfDocument.getPage(1).then(function(page) {
+          pdfViewer.scrollPageIntoView({ pageNumber: 1 });
+      });
+  });
+
+/*
+    document.addEventListener("DOMContentLoaded", function() {
+        // Le document est complètement chargé, nous pouvons afficher le message.
+        var messageElement = document.getElementById("message");
+        messageElement.style.display = "block";
+        alert(pdfUrl);
+    
+    });
+   
+  */
+</script>
+ 
+ 
+ 
+
+{% endblock %}

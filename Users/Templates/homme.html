@@ -1,0 +1,1058 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Accueil
+{% endblock %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+{% block header %}
+
+<div class="nav-container neutral-nav-menu m-off_canvas-menu fixed-navigation-initialized" id="navigation" kameleoonlistener-dkcq="true">
+  <ul id="nav">
+     <!--  <li class="level0 nav-noel level-top first">
+<a href="" class="level-top trackme" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Noël">
+&nbsp;Noël
+</a>
+</li> -->
+<li class="level0 nav-livres level-top has-submenu toblackonclick" >
+    <a href="" class="level-top trackme has-submenu " data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Livres">
+    Livres
+    </a>
+    <div class="submenu-wrapper-first set-border-box m-wrapper  tohide tohide1" id="menu-livres" >
+    <!--           <div class="m-nav--header hide-on-desktop" >
+                <a href="#" class="m-off_canvas-close">&lt; Retour</a>
+                <div class="m-nav--title m-nav--title--current"><a href="#" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres_Voirtout">Livres
+              <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+    <!-- cms_block_start:decitre-submenu-livres -->
+    <div class="submenu-container row ">
+    <div class="content-16 submenu-container-section">
+    <ul class="submenu-container-section-links-container m-submenu-container-section-links-container ">
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" href="#">Coups de cœur</a></li> 
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic"  href="#">Meilleures ventes</a></li> 
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" href="#">Nouveautés</a></li> 
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-A paraître" href="#">Précommandes</a></li> 
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Prix littéraires" href="#">Prix littéraires</a></li> 
+
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Médias" href="#">Vus dans les médias</a></li> 
+
+      <li><a class="trackme bold m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Selection-Bons-plans" href="#">Bons plans</a></li> 
+    </ul>
+
+    <div class="submenu-container-title-background bold" >
+      En ce moment
+    </div>
+
+    <div class="submenu-container-product-highlighting" style="text-align: center;">
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Produit-9782344057773" href="">
+      <img src="{% static '/fichier/logo.png' %}" alt="Titeuf Tome 18" width="120" height="160" data-src="{% static '/fichier/logo.png' %}" class="lozad lozad--loaded" data-loaded="true"><noscript><img src="#" alt="Titeuf Tome 18" width="120" height="160" /></noscript>
+      </a>
+
+      <div class="price">
+        11,50 €
+      </div>
+
+      <a class="trackme dct-button-action" data-tracking-category="Menu deroulant" data-tracking-action="clic" style="text-align: center; width: max-content; background-color: #d33416; padding: 1px 25px 1px 25px; border-radius: 10px;" href="#">
+          Je découvre
+      </a>
+    </div>
+    </div>
+
+    <div class="toblock">
+    <div class="content-83 submenu-container-section "  >
+    <div class="submenu-section-row">
+      <div class="content-20 submenu-container-section  position-1">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature" href="#">Littérature</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!--  <div class="m-nav--header hide-on-desktop">
+                          <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                          <div class="m-nav--title m-nav--title--current">
+                            <a href="#" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Littérature_Voirtout">Littérature 
+                            <span class="m-nav--return">&gt; Voir tout</span>
+                          </a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Romans" href="#">Romans</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Polars" href="#">Polars</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Romance-litterature-sentimentale" href="#">Romance</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Fantasy &amp; SF" href="#">Fantasy et Science-Fiction</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Pléiade" href="#">Pléiades</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Théâtre, poésie, critiques" href="#">Théâtre - Poésie - Critiques</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Littérature-Rentree-litteraire" href="#">Rentrée littéraire 2023</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-3">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse" href="#">Jeunesse</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+            <!--             <div class="m-nav--header hide-on-desktop">
+                          <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                          <div class="m-nav--title m-nav--title--current"><a href="#" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeunesse_Voirtout">Jeunesse 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Albums 0-3 ans" href="">Livres 0-3 ans</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Lectures 3-6 ans" href="">Livres 3-6 ans</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Lectures 6-12 ans" href="">Livres 6-12 ans</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Romans ados" href="">Romans Ados</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Documentaires" href="">Documentaires</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Loisirs &amp; jeux" href="">Loisirs &amp; jeux</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Jeunesse-Adaptes aux dyslexiques" href="">Adaptés aux dyslexiques</a></li> 
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-5">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales" href=" ">Arts - Sciences<br>humaines et sociales</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop">
+                        <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Arts - Sciences<br>humaines et sociales_Voirtout">Arts - Sciences<br>humaines et sociales 
+                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales-Histoire" href="">Histoire</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales-Art cinema musique" href="">Arts - Cinéma - Musique</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales-Philo, socio &amp; ethnologie" href="">Philosophie et Sociologie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales-Politique &amp; actualités" href="">Politique - Actualités</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences humaines &amp; sociales-Religions" href="">Religions</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-7">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi" href="">Entreprise - Droit -<br> Economie</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                          <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                              <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Entreprise - Droit -<br> Economie_Voirtout">Entreprise - Droit -<br> Economie 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Droit" href="">Droit</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Gestion" href="">Gestion</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Economie" href="">Economie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Management" href="">Management</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Concours &amp; emploi" href="">Concours et Emploi</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Droit, eco, emploi-Orientation, metiers" href="">Orientation et Métiers</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-9">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pedagogie" href="">Scolaire et Pédagogie</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Scolaire et Pédagogie_Voirtout">Scolaire et Pédagogie
+                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pédagogie-Manuels scolaires" href="">Manuels scolaires</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pédagogie-Soutien scolaire" href="">Soutien scolaire</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pédagogie-Pedagogie" href="">Pédagogie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pedagogie-Orientation" href="">Orientation</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Scolaire &amp; pédagogie-Dictionnaires" href="">Dictionnaires</a></li> 
+
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-2">
+          <a class="trackme  submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique" href="">Bien-être et <br>Vie pratique</a>
+
+          <ul class="submenu-container-section-links-container m-wrapper">
+                        <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                            <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Bien-être et <br>Vie pratique_Voirtout">Bien-être et <br>Vie pratique 
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Développement personnel" href="">Développement personnel</a></li> 
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Cuisine &amp; vins" href="">Cuisine et Vins</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Santé et bien-etre" href="">Santé et Bien-être</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Régime &amp; minceur" href="">Régimes et minceur</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Esotérisme" href="">Ésotérisme</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bien-être &amp; vie pratique-Couple, enfant, famille" href="">Famille - Éducation</a></li> 
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-4">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour" href="">BD, Mangas et Humour</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop">
+                        <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="BD, Mangas et Humour_Voirtout">BD, Mangas et Humour
+                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-Mangas" href="">Mangas</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-Mangas collector" href="">Manga collector</a></li> 
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-BD tout public" href="">BD - Tout public</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-BD jeunesse" href="">BD - Jeunesse</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-Comics" href="">Comics</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-BD &amp; humour-Humour" href="">Humour</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-6">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature" href="">Loisirs, Nature et Voyages</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop">
+                        <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Loisirs, Nature et Voyages_Voirtout">Loisirs, Nature et Voyages 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Développement durable" href="">Développement durable</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Sports" href="">Sports</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Boutique Guides de voyage et tourisme" href="">Guides de voyages</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Cartes &amp; atlas" href="">Cartes et Atlas</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Beaux livres pays" href="">Beaux livres pays</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Nature &amp; animaux" href="">Nature et Animaux</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Loisirs &amp; nature-Déco, brico &amp; jardin" href="">Bricolage - Jardinage</a></li> 
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-8">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques" href="">Sciences et Techniques</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                          <div class="m-nav--title m-nav--title--current">
+                        <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Sciences et Techniques_Voirtout">Sciences et Techniques 
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Médecine &amp; paramédical" href="">Médecine et Paramédical</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Psychologie" href="">Psychologie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Informatique" href="">Informatique</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Physique, biologie" href="">Physique - Biologie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Mathématiques" href="">Mathématiques</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Sciences &amp; techniques-Ecologie" href="">Ecologie</a></li> 
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-10">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO" href="">Langues et Livres VO</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Langues et Livres VO_Voirtout">Langues et Livres VO 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Français Langue étrangère" href="">FLE</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Anglais" href="">Anglais</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Anglais jeunesse" href="">Anglais Jeunesse</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Espagnol" href="">Espagnol</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Allemand" href="">Allemand</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Langues &amp; VO-Chinois" href="">Chinois</a></li> 
+          </ul>
+      </div>
+    </div>
+    </div>
+    <a class="trackme submenu-highlight-link dct-button-default" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Livres-Bouton-Voir tous les rayons" href="">Voir tous les rayons</a>
+    </div>
+    </div>
+    <!-- cms_block_end:decitre-submenu-livres --></div></li>
+    <li class="level0 nav-ebooks level-top has-submenu toblackonclick1">
+    <a href="" class="level-top trackme has-submenu" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Ebooks &amp; liseuses">
+    Ebooks &amp; liseuses
+    </a>
+    <div class="submenu-wrapper set-border-box m-wrapper tohide tohide2" id="menu-ebooks">
+      <!-- <div class="m-nav--header hide-on-desktop" ><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+        <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="
+    Ebooks &amp; liseuses_Voirtout">Ebooks &amp; liseuses
+    <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+    <!-- cms_block_start:decitre-submenu-ebooks --><div class="submenu-container row">
+    <div class="content-16 submenu-container-section">
+    <ul class="submenu-container-section-links-container m-submenu-container-section-links-container">
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Meilleures ventes" href="">Meilleures ventes</a></li>
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Nouveautés" href="">Nouveautés</a></li>
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Promos du moment" href="">Offres promos</a></li>
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Ebooks gratuits" href="">Ebooks gratuits</a></li>
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Ebooks audio" href="">Ebooks audio</a></li>
+
+      <li><a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Liseuses" href="">Liseuses</a></li>
+    </ul>
+
+    <div class="submenu-container-title-background bold" >
+      En ce moment
+    </div>
+
+    <div class="submenu-container-product-highlighting">
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Ebooks-Produit-liseuse-touch-hd-plus-bronze-vivlio-7640152095528" href=" ">
+      <img src="{% static '/fichier/logo.png' %}" alt="Liseuse Touch HD" width="120" height="160" data-src="" class="lozad lozad--loaded" data-loaded="true"><noscript><img src="{% static '/fichier/logo.png' %}" alt="Liseuse Touch HD plus bronze Vivlio" width="120" height="160" /></noscript> 
+      </a>
+
+      <div class="price">
+        149,99 €
+      </div>
+
+
+
+      <a class="trackme dct-button-action" data-tracking-category="Menu deroulant" style=" background-color: #d33416; text-align: center;border-radius: 10px;width: max-content;padding: 1px 25px 1px 25px; margin-bottom: 10px;">
+          Je découvre
+      </a>
+    </div>
+    </div>
+
+    <div class="toblock">
+    <div class="content-83 submenu-container-section">
+    <div class="submenu-section-row">
+      <div class="content-20 submenu-container-section position-1">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature" href="">Littérature</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                          <!--  <div class="m-nav--header hide-on-desktop">
+                            <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                            <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Littérature_Voirtout">Littérature 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Romans" href="">Romans</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Polars" href="">Polars</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Romance-litterature-sentimentale" href="">Romance</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Fantasy &amp; SF" href="">Fantasy et Science-Fiction</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Romans historiques" href="">Romans historiques</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Théâtre poésie" href="">Théatre - Poésie - Critiques</a></li>
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Littérature-Livres-audio" href="">Ebooks audio</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-2">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse" href="">Jeunesse</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeunesse_Voirtout">Jeunesse 
+                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse-Pour les 0-6 ans" href="">Ebooks 0-6 ans</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse-Lectures 6-12 ans" href="">Ebooks 6-12 ans</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse-Romans ados" href="">Romans ados</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse-Documentaires" href="">Documentaires</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Jeunesse-Livres-audio" href="">Ebooks audio</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-5">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Sciences &amp; techniques" href="">Sciences et Techniques</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--   <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                      <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Sciences et Techniques_Voirtout">Sciences et Techniques 
+                        <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Sciences &amp; techniques-Médecine &amp; paramédical" href="">Médecine et Paramédical</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Sciences &amp; techniques-Psychologie" href="">Psychologie</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Sciences &amp; techniques-Informatique" href="">Informatique</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Sciences &amp; techniques-Mathématiques" href="">Mathématiques</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-6">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Scolaire &amp; pédagogie" href="">Scolaire et Pédagogie</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop">
+                      <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Scolaire et Pédagogie_Voirtout">Scolaire et Pédagogie
+                        <span class="m-nav--return">&gt; Voir tout</span></a></div></div>
+    -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Scolaire &amp; pédagogie-Pédagogie" href="">Pédagogie</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Scolaire &amp; pédagogie-Soutien scolaire" href="">Soutien scolaire</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Scolaire &amp; pédagogie-Orientation" href="">Orientation</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Scolaire &amp; pédagogie-Dictionnaires" href="">Dictionnaires</a></li>
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-8">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; Ebooks en VO" href="">Langues et Ebooks en VO</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current">
+                        <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Langues et Ebooks en VO_Voirtout">Langues et Ebooks en VO 
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; VO-FLE" href="">FLE</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; VO-Littérature Anglais" href="">Anglais - Littérature VO </a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; VO-Apprentissage Anglais" href="">Anglais - Apprentissage</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; VO-Espagnol" href="">Espagnol</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Langues &amp; VO-Allemand" href="">Allemand</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-4">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique" href="">Bien-être et Vie pratique</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current">
+                        <a href="https://www.decitre.fr/ebooks/bien-etre-vie-pratique.html" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Bien-être et Vie pratique_Voirtout">Bien-être et Vie pratique
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique-Santé et bien-être" href="">Santé et Bien-être</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique-Développement personnel" href="">Développement personnel</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique-Erotisme &amp; sexualité" href="">Érotisme et sexualité</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique-Esotérisme" href="">Ésotérisme</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Bien-être &amp; vie pratique-Cuisine &amp; vins" href="">Cuisine et Vins</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-3">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines" href="">Arts, Société et <br>Sciences humaines</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop">
+                      <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current">
+                      <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Arts, Société et <br>Sciences humaines_Voirtout">Arts, Société et <br>Sciences humaines 
+                        <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines-Histoire" href="">Histoire</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines-Philo &amp; sociologie" href="">Philosophie - Sociologie</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines-Politique &amp; actualités" href="">Politique - Actualités</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines-Arts" href="">Arts, Cinéma et Musique</a></li>                    <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Arts, société &amp; sciences humaines-Religions" href="https://www.decitre.fr/ebooks/arts-societe-sciences-humaines/religions.html">Religions</a></li>
+
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-7">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie" href="">Entreprise - Droit - Economie </a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Entreprise - Droit - Economie _Voirtout">Entreprise - Droit - Economie 
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie-Gestion &amp; comptabilité" href="">Gestion et Comptabilité</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie-Droit" href="">Droit</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie-Economie" href="">Economie</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie-Management" href="">Management et Marketing</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Droit &amp; économie-Concours" href="">Concours et Emploi</a></li>
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-9">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour" href="">BD, Mangas et Humour</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+            <!-- <div class="m-nav--header hide-on-desktop">
+            <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a><div class="m-nav--title m-nav--title--current">
+            <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="BD, Mangas et Humour_Voirtout">BD, Mangas et Humour 
+              <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-BD tout public" href="">BD - Tout public</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-BD jeunesse" href="">BD - Jeunesse</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-Mangas" href="">Mangas</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-Comics" href="">Comics</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-Humour" href="">Humour</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-BD &amp; humour-Humour" href="">Lecture au Chapitre</a></li>
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-10">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages" href="">Loisirs, Nature et Voyages</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!-- <div class="m-nav--header hide-on-desktop">
+                    <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                    <div class="m-nav--title m-nav--title--current">
+                      <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Loisirs, Nature et Voyages_Voirtout">
+                        Loisirs, Nature et Voyages <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages-Guides de voyages" href="">Guides de voyages</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages-Nature &amp; animaux" href="">Nature et Animaux</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages-Cartes, atlas &amp; plans" href="">Cartes et Atlas</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages-Sports" href="">Sports</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="E-books-Loisirs, nature &amp; voyages-Développement durable" href="">Développement durable</a></li>
+          </ul>
+
+      </div>
+    </div>
+    </div>
+    <a class="trackme submenu-highlight-link dct-button-default" data-tracking-category="Menu deroulant" data-tracking-action="clic"  href="#">Voir tous les rayons</a>
+
+    </div>
+
+    <!-- cms_block_end:decitre-submenu-ebooks -->
+    </div>
+    </div>
+    </li>
+    <li class="level0 nav-livres-nouveautes level-top ">
+    <a href="" class="level-top trackme" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Nouveautés">
+    Nouveautés
+    </a>
+    </li>
+    <li class="level0 nav-livres-preferes-des-libraires level-top has-submenu toblackonclick2">
+    <a href="#" class="level-top trackme has-submenu" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Coups de cœur">
+    Coups de cœur
+    </a>
+    <div class="submenu-wrapper set-border-box m-wrapper tohide tohide3" id="menu-livres-preferes-des-libraires">
+                <!-- <div class="m-nav--header hide-on-desktop" >
+                <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a><div class="m-nav--title m-nav--title--current">
+                <a href="#" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups de cœur_Voirtout">
+              Coups de cœur
+              <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+    <!-- cms_block_start:decitre-submenu-livres-preferes-des-libraires -->
+
+    <div class="submenu-container row">
+    <div class="content-16 submenu-container-section">
+    
+    <div class="submenu-container-product-highlighting">
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Produit-9782384820344" href="">
+      <img src="{% static '/fichier/logo.png' %}" alt="Ce que je sais de toi" width="120" height="170" data-src="#" class="lozad lozad--loaded" data-loaded="true"><noscript><img src="" alt="Ce que je sais de toi" width="120" height="170" /></noscript> 
+      </a>
+
+      <div class="price">
+          22,00 €
+      </div>
+
+      <a class="trackme dct-button-action" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Produit-9782384820344" href="">
+      Je découvre
+      </a>
+    </div>
+    </div>
+
+    <div class="content-33 submenu-container-section hide-on-responsive">
+    <div class="submenu-container-title-background bold" style="margin-top: -170px; align-self: start;">
+    Le coup de cœur du moment
+    </div>
+
+    <div style="text-align: justify" >
+      <span class="bold"><strong>Sélection prix Première Plume</strong></span>
+      <br><br>
+
+    Le Caire, Egypte, 60's. Tarek annonce, sans conviction,<br> à son père qu'il veut devenir médecin comme lui. Montréal, Canada, 80's.<br>
+    Tarek, médecin réputé, revient sur son exil. Amour impossible,<br> devoir de filiation, rébellion contre une société archaïque,<br> vent de liberté qui laisse présager un changement.<br>
+    Une merveille à lire d'urgence!<br>
+
+      <br><br><strong>Carine, libraire à Annemasse</strong>
+    </div>
+    </div>
+
+
+
+
+    <div class="content-16 submenu-container-section">
+    <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon" href="">Par rayon</a>
+    <ul class="submenu-container-section-links-container m-wrapper">
+            <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                <div class="m-nav--title m-nav--title--current">
+                  <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Par rayon_Voirtout">Par rayon 
+                    <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Littérature" href="">Littérature</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Jeunesse" href="">Jeunesse</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_BD &amp; Humour" href="">BD &amp; Humour</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Arts &amp; sciences humaines" href="">Arts &amp; sciences humaines</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Bien-être &amp; cuisine" href="">Bien-être &amp; cuisine</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Loisirs &amp; voyages" href="">Loisirs &amp; voyages</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Droit &amp; économie" href="">Droit &amp; économie</a></li>
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Médecine &amp; sciences" href="">Médecine &amp; sciences</a>
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par rayon_Jeux-de-société" href="">Jeux de société</a>
+
+    </ul>
+    </div>
+
+
+    <div class="content-16 submenu-container-section row">
+    <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe" href="">Par librairie</a>
+    <ul class="submenu-container-section-links-container m-wrapper" style="padding: 0">
+      <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+        <div class="m-nav--title m-nav--title--current">
+          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Par librairie_Voirtout">Par librairie 
+            <span class="m-nav--return">&gt; Voir tout</span></a></div></div>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Lyon Confluence" href="">Lyon Confluence</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Lyon Bellecour" href=" ">Lyon Bellecour</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Lyon Part-Dieu" href=" ">Lyon Part-Dieu</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Ecully" href=" ">Ecully</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Creches" href=" ">Crêches-sur-Saône</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Annecy" href=" ">Annecy</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Chambéry" href=" ">Chambéry</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Grenoble" href=" ">Grenoble</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Annemasse" href=" ">Annemasse</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Levallois-Perret" href=" ">Levallois-Perret</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Saint-Priest" href=" ">Saint Priest</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Par equipe_Bezons" href=" ">Bezons</a></li>
+    </ul>
+    </div>
+
+    <div class="content-16 submenu-container-section row">
+    <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_a-decouvrir">A découvrir</a>
+    <ul class="submenu-container-section-links-container m-wrapper" style="padding: 0">
+                <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                  <div class="m-nav--title m-nav--title--current"><a href="undefined" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="A découvrir_Voirtout">A découvrir
+                <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Podcasts_La voix des libraires" href= "">Podcast La voix des libraires</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Podcasts_La voix des auteurs" href=" ">Podcast La voix des auteurs</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Podcasts_ekoo" href=" ">Coups de cœur audios</a></li>
+      <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Podcasts_blog" href=" ">Blog</a></li>
+
+    </ul>
+
+    </div>
+
+    <a class="trackme submenu-highlight-link dct-button-default" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Coups-de-coeur_Tous les coups de coeur" href="#">Tous les coups de coeur</a>
+      </div>
+    <!-- cms_block_end:decitre-submenu-livres-preferes-des-libraires -->
+    </div>
+    </li>
+    <li class="level0 nav-livres-a-prix-reduits level-top has-submenu toblackonclick3">
+    <a href="" class="level-top trackme has-submenu" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Livres à prix réduits">
+    Livres à prix réduits
+    </a>
+    
+    <div class="submenu-wrapper set-border-box m-wrapper tohide tohide4" id="menu-livres-a-prix-reduits">
+                    <!-- <div class="m-nav--header hide-on-desktop" ><a href="#" class="m-off_canvas-close">&lt; Retour</a>
+                    <div class="m-nav--title m-nav--title--current"><a href="#" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="
+                  Livres à prix réduits_Voirtout">Livres à prix réduits
+                  <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+    <!-- cms_block_start:decitre-submenu-livres-a-prix-reduits -->
+
+    <div class="submenu-container row " >
+    <div class="content-16 submenu-container-section prix_reduit">
+    <div class="submenu-container-section-links-container m-submenu-container-section-links-container" style="display: block;">
+      <a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" href="">Nouvel arrivage</a>
+      <a class=" bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic" href="">Coffrets</a>
+      <a class=" bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic"  href="">Meilleures ventes</a>
+      <a class="bold trackme m-heading" data-tracking-category="Menu deroulant" data-tracking-action="clic"  href="">Prix minis à moins de 5€</a>	
+    </div>
+
+    <div class="submenu-container-title-background bold">
+      En ce moment
+    </div>
+
+    <div class="submenu-container-product-highlighting">
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_mea-5552842184110" href=" ">
+      <img src="{% static '/fichier/logo.png' %}" alt="Plus grand plus petit" width="160" height="170" data-src=" " class="lozad lozad--loaded" data-loaded="true"><noscript><img src="{% static '/fichier/logo.png '% }" alt="Plus grand plus petit" width="160" height="170" /></noscript> 
+      </a>
+
+      <div class="price">
+    <del> 12,50 €</del>
+    <span class="final-price">
+            7 €
+    </span>	
+      </div>
+
+      <a class="trackme dct-button-action" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_btn-mea-5552501145537" href=" ">
+      J'en profite
+      </a>
+    </div>
+    </div>
+
+    <div class="toblock">
+    <div class="content-83 submenu-container-section togridcolumn">
+    <div class="grid-row">
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine" href="">Cuisine</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                              <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                                  <div class="m-nav--title m-nav--title--current">
+                                    <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Cuisine_Voirtout">Cuisine
+                                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_repas-diner" href=" ">Repas &amp; dîner</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_entree-plats" href=" ">Entrées &amp; plats</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_fromages-desserts" href=" ">Fromages &amp; desserts</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_cuisine-du-monde" href=" ">Cuisine du monde</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_vins-boissons" href=" ">Vins &amp; boissons</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_cuisine_derniers-arrivages" href=" ">Derniers arrivages</a></li> 
+          </ul>
+      </div>
+
+
+
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique" href="">Bien-être &amp; santé</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Bien-être &amp; santé_Voirtout">Bien-être &amp; santé 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div>  -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_massage" href="">Massages &amp; bien-être</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_grossesse" href="">Grossesse </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_naissance" href="">Naissance &amp; enfant</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_couple-sexualite" href="">Couple &amp; sexualité</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_nutrition" href="">Nutrition &amp; remise en forme</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_sante" href="">Santé </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_bien-etre-vie-pratique_esoterisme" href="">Esotérisme </a></li>
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_tourisme" href="">Tourisme &amp; nature</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                <!--                          
+                    <div class="m-nav--title m-nav--title--current">
+                      <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Tourisme &amp; nature_Voirtout">Tourisme &amp; nature 
+                        <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_tourisme_paysage" href=" ">Tourisme &amp; paysages</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_tourisme_animaux" href=" ">Animaux </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_tourisme_nature-jardinage" href=" ">Nature &amp; jardinage</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Loisirs" href="">Loisirs</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                      <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Loisirs_Voirtout">Loisirs
+                      <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Loisirs_sport" href=" ">Sport </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Loisirs_loisirs-creatifs" href=" ">Loisirs créatifs</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Loisirs_jeux" href=" ">Jeux </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Loisirs_arts-menagers" href=" ">Arts ménagers &amp; bricolage</a></li> 
+          </ul>
+      </div>
+    </div>
+
+
+
+    <div class="grid-row">
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-action="clic" data-tracking-label="LNPR_Arts" href=" ">Arts</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                            <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                                <div class="m-nav--title m-nav--title--current">
+                                  <a href=" " class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Arts_Voirtout">Arts 
+                                    <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_peinture-sculpture" href=" ">Peinture &amp; sculpture</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_architecture" href=" ">Architecture &amp; design</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_arts-decoratif" href=" ">Arts décoratifs</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_mode" href=" ">Mode </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_photographie" href=" ">Photographie &amp; cinéma</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_musique" href=" ">Musique - Danse</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Arts_derniers-arrivages" href=" ">Derniers arrivages</a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section">
+          <a class="trackme  submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Jeunesse" href="">Jeunesse</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop">
+                      <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current">
+                        <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeunesse_Voirtout">Jeunesse 
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Jeunesse_albums-0-6-ans" href=" ">Albums 0-6 ans</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Jeunesse_documentaires" href=" ">Documentaires </a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Jeunesse_lectures-7-ans-et-plus" href=" ">Lectures 7 ans et plus</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_Jeunesse_jeux" href=" ">Jeux </a></li> 
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_savoirs" href="">Savoirs</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+          <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+              <div class="m-nav--title m-nav--title--current">
+                <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Savoirs_Voirtout">Savoirs 
+                  <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_savoirs_histoire-geo" href=" ">Histoire - Géographie</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_savoirs_sciences-dures" href=" ">Sciences dures</a></li> 
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="LNPR_savoirs_derniers-arrivages" href=" ">Derniers arrivages Savoir et culture</a></li>
+          </ul>
+      </div>
+
+
+    </div>
+    </div>
+    <a class="trackme submenu-highlight-link dct-button-default " data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Papeterie-Bouton-Voir tous les rayons" href="">Voir tous les rayons</a>
+    </div>
+    </div><!-- cms_block_end:decitre-submenu-livres-a-prix-reduits -->
+    </div>
+    </li>
+    <li class="level0 nav-bons-plans-livres level-top">
+    <a href="" class="level-top trackme" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Bons plans">
+    Bons plans
+    </a>
+    </li>
+    <li class="level0 nav-jeux-et-jouet level-top has-submenu toblackonclick4">
+    <a href="" class="level-top trackme has-submenu" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Jeux de société">
+    Jeux de société
+    </a>
+    <div class="submenu-wrapper set-border-box m-wrapper tohide tohide5" id="menu-jeux-et-jouet">
+              <!--  <div class="m-nav--header hide-on-desktop" ><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                  <div class="m-nav--title m-nav--title--current">
+                <a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux de société_Voirtout">Jeux de société
+              <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+    <!-- cms_block_start:decitre-submenu-jeux-et-jouet --><div class="submenu-container row">
+    <div class="content-16 submenu-container-section">
+    <ul class="submenu-container-section-links-container m-submenu-container-section-links-container">
+              <li><a class="trackme bold" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-a decouvrir-Meilleures ventes" href="">Top ventes </a></li>
+              <li><a class="trackme bold" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-a decouvrir-Petits prix jeux" href=" ">Petits prix jeux</a></li>
+              <li><a class="trackme bold" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-a decouvrir-coups de coeur jeux" href=" ">Coups de coeur</a></li>
+              <li><a class="trackme bold" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-a decouvrir- Les jeux primés" href=" ">Les jeux primés</a></li>
+
+
+    </ul>
+
+    <div class="submenu-container-title-background bold">
+      En ce moment
+    </div>
+
+    <div class="submenu-container-product-highlighting">
+      <a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux- 3770026418000" href="">
+      <img src="{% static '/fichier/logo.png' %}" alt="DISTRICT NOIR " width="120" height="150" data-src="" class="lozad lozad--loaded" data-loaded="true"><noscript><img src="{% static '/fichier/logo.png' %}" alt="DISTRICT NOIR " width="120" height="150" /></noscript> 
+      </a>
+
+      <div class="price">
+    <span class="final-price">
+          16,99 €
+    </span>	
+      </div>
+
+      <a class="trackme dct-button-action" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux- 3770026418000" href="">
+      Je découvre
+      </a>
+    </div>
+    </div>
+
+
+    <div class="content-83 submenu-container-section">
+    <div class="submenu-section-row">
+
+      <div class="content-20 submenu-container-section position-1">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux de société pour les enfants" href=" ">Jeux pour enfants</a>
+          <ul class="submenu-container-section-links-container m-wrapper">
+                                    <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                                      <div class="m-nav--title m-nav--title--current"><a href="" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux pour enfants_Voirtout">Jeux pour enfants 
+                                        <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Jeux éveil" href="">Jeux d'éveil</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Jeux pour les 3 à 8 ans " href="">Jeux pour les 3 à 8 ans</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Jeux pour les 8 à 12 ans " href=" ">Jeux pour les 8 à 12 ans</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Loisirs créatifs" href=" ">Loisirs créatifs</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Imagination et construction" href=" ">Imagination et construction</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux pour enfants-Jeux éducatifs" href=" ">Jeux éducatifs</a></li>
+          </ul>
+      </div>			
+
+
+
+      <div class="content-20 submenu-container-section position-8">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes" href=" ">Jeux famille et adultes</a>
+
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop">
+                      <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                      <div class="m-nav--title m-nav--title--current">
+                        <a href=" " class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux famille et adultes_Voirtout">Jeux famille et adultes
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux d'ambiance" href="">Jeux d'ambiance</a></li>
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de famille" href=" ">Jeux de famille</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de société classiques" href=" ">Jeux de société classiques</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de voyage" href=" ">Jeux de voyage</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de stratégie" href=" ">Jeux de stratégie</a></li>
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de réflexion" href=" ">Jeux de réflexion</a></li>
+
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Jeux famille et adultes-Jeux de cartes" href=" ">Jeux de cartes</a></li>
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-8">
+          <a class="trackme submenu-container-section-main-link m-heading has-submenu" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Puzzle" href=" ">Puzzles</a>
+
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!-- <div class="m-nav--header hide-on-desktop">
+                    <a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                    <div class="m-nav--title m-nav--title--current">
+                      <a href=" " class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Puzzles_Voirtout">Puzzles 
+                    <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Puzzle-Puzzles 60-500 pces" href=" ">Puzzles 60-500 pces</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Puzzle-Puzzles 500 à 1000 pces" href=" ">Puzzles 500 à 1000 pces</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Puzzle-Puzzles disney" href=" ">Puzzles Disney</a></li>
+
+
+          </ul>
+      </div>
+
+      <div class="content-20 submenu-container-section position-2">
+          <a class=" submenu-container-section-main-link m-heading has-submenu">Types de jeux</a>
+
+          <ul class="submenu-container-section-links-container m-wrapper">
+                    <!--  <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current"><a href="undefined" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Types de jeux_Voirtout">Types de jeux
+                          <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-mecaniques-Jeux solo" href="">Jeux solo</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-mecaniques-Jeux à deux" href="">Jeux à deux</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-mecaniques-Jeux coopératifs" href="">Jeux coopératifs</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-mecaniques-Escape games et jeux d'enquête" href="">Escape games et jeux d'enquête</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-mecaniques-puzzle" href="">Puzzles et casse-têtes</a></li>
+          </ul>
+      </div>
+
+
+      <div class="content-20 submenu-container-section position-2">
+          <a class=" submenu-container-section-main-link m-heading has-submenu">Par marque</a>
+
+          <ul class="submenu-container-section-links-container m-wrapper">
+                        <!-- <div class="m-nav--header hide-on-desktop"><a href="#navigation" class="m-off_canvas-close">&lt; Retour</a>
+                        <div class="m-nav--title m-nav--title--current">
+                          <a href="undefined" class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Par marque_Voirtout">Par marque 
+                            <span class="m-nav--return">&gt; Voir tout</span></a></div></div> -->
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Iello" href=" ">Iello</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Asmodee" href=" ">Asmodee</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-SMARTJOUETS " href=" ">Smartjouet</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Gigamic" href=" ">Gigamic</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Djeco" href=" ">Djeco</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Oya" href=" ">Oya</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Blackrock Editions" href=" ">Blackrock Editions</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Ravensburger" href=" ">Ravensburger</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Topi Games" href=" ">Topi Games</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-CARTAMUNDI " href=" ">Cartamundi</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Chef Club" href="">Chef Club</a></li>
+              <li><a class="trackme" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Marque-Bioviva" href=" ">Bioviva</a></li>
+
+            
+          </ul>
+      </div>			
+      
+
+      <div class="content-100 submenu-container-section">
+    <a class="trackme submenu-highlight-link dct-button-default push-content-left" data-tracking-category="Menu deroulant" data-tracking-action="clic" data-tracking-label="Jeux-Bouton-Voir tous les rayons" href=" ">Voir tous les rayons</a>
+
+          </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <!-- cms_block_end:decitre-submenu-jeux-et-jouet -->
+    </div>
+    </li><li class="level0 nav-occasion level-top nav-fixed-last-item-to-hide">
+    <a href="" class="level-top trackme" data-tracking-category="Barre de navigation" data-tracking-action="clic" data-tracking-label="Reprise de livres">
+    Reprise de livres
+    </a>
+    </li>               
+      </ul>
+</div>
+
+{% endblock %}
+
+{% block content %}
+        <!--<div class="brand"> Ebooks</div>
+        <div class="addresse-bar">your addresse</div>-->
+
+     <div class="container mt-1 mb-5">
+
+                     <div class="contenu"  style=" overflow:auto; width: 100%; height: auto;">
+                      <div class="carous">
+                        <div class="figure">
+                          {% if  livre1 %}
+                          <img src="{{livre1.couverture.url}}" alt="{{livre1.titre}}" class="pic">
+                          {% endif %}
+                          {% if livre2 %}
+                          <img src="{{livre2.couverture.url}}" alt="{{livre2.titre}}" class="pic">
+                          {% endif %}
+                          {% if livre3 %}
+                          <img src="{{livre3.couverture.url}}" alt="{{livre3.titre}}" class="pic">
+                          {% endif %}
+                        </div>
+                      </div>
+
+
+
+                      <div class="card" style="float: center;">
+                        <p  class="text-center" style="color: rgb(4, 255, 79); font-size: 2vw; font-family: Verdana;">LIVRES NUMERIQUES BURKINA</p><h5 class="text-center" style=" font-size: 1.5vw;">Met à disposition de tout, une biblotheque <br>en ligne avec de nonbreux livre numerique </h5>
+                        <br> <h6 class="text-center" style="color: coral; font-size: 1.8vw;">plus de 1000 livres numeriques</h6> 
+                      </div>
+                   
+                      <div class="carous2">
+                        <div class="figure2">
+                          {% if livre1 %}
+                          <img src="{{livre1.couverture.url}}" alt="{{livre1.titre}}" class="pic2">
+                          {% endif %}
+                          {% if livre2 %}
+                          <img src="{{livre2.couverture.url}}" alt="{{livre2.titre}}" class="pic2">
+                          {% endif %}
+                          {if livre3 %}
+                          <img src="{{livre3.couverture.url}}" alt="{{livre3.titre}}" class="pic2">
+                          (% endif %)
+                        </div>
+                      </div>
+                    </div>
+                   
+            
+
+                      
+                      <div id="carouselExampleCaptions" class="carousel slide mb-1 mt-4 " style="height:300px;  margin-left:25% ; margin-right: 25% ; overflow:hidden;;position: relative;" >
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            {% if livre1 %}
+                            <img src="{{livre1.couverture.url}}" class="d-block w-100 " alt="{{livre1.titre}}" style="max-height: 300px ;">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h2 class="" style="color:rgb(5, 5, 5);">{{livre1.titre}}</h2>
+                              <p style="color: darkorange;">{{livre1.description}}"</p>
+                            </div>
+                            {% endif %}
+                          </div>
+                          <div class="carousel-item">
+                            {% if livre2 %}
+                            <img src="{{livre2.couverture.url}}" class="d-block w-100" alt="{{livre2.titre}}" style="max-height: 300px;">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3 style="color:rgb(5, 5, 5);">{{livre2.titre}}</h3>
+                              <p style="color: darkorange;">{{livre2.description}}"</p>
+                            </div>
+                            {% endif %}
+                          </div>
+                          <div class="carousel-item">
+                            {% if livre3 %}
+                            <img src="{{livre3.couverture.url}}" class="d-block w-100" alt="{{livre3.titre}}" style="max-height: 300px;">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3 style="color:rgb(5, 5, 5);">{{livre3.titre}}</h3>
+                              <p style="color: darkorange;">{{livre3.description}}"</p>
+                            </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>             
+
+     </div>
+
+     {% endblock %}
+
+
+     {% block post-footer %}
+
+     <div class="dct-footer-line-wrapper dct-footer-main-background">
+      <div class="grid-row dct-footer-main-background dct-footer-newsletter-social-line dct-footer-secondary-color " style="height: 13vh; font-size: 1.5vw;">
+          <div class="content-66 dct-footer-newsletter" >
+            <span class="dct-icon-livre_numerique"><img src="{% static '/fichier/logo.png' %}"   width=" 73px" height=" 70px"></span>
+              <div class="content-50" >
+                  <div class="title" style="font-size: 2vw; display: flex;"><i class='bx bx-envelope' style="font-size: 3vw;"></i>Newsletter</div>
+                 <span style="display: block; width: max-content; line-height: 1;" > Inscrivez-vous pour découvrir<br>toutes nos offres !</span>
+              </div>
+              <div class="content-50 newsletter">
+                  <form action="{% url 'newletter' %}"  method="POST"  class="dct-form" style="width: max-content;">
+                    {% csrf_token %}
+                      <input name="email" type="email" placeholder="Votre adresse e-mail" class="form-control">
+                      <button type="submit" title="Inscription" class="dct-button-flat">
+                          Je m'inscris
+                      </button>
+                  </form>
+              </div>
+          </div>
+          <div class="content-33" style=" padding-right: 20px;">
+              <ul class="dct-footer-social-links" >
+                      <li><a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-facebook" href="http://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-square bx-tada bx-flip-horizontal' style='color:#2416d3' ></i></a> </li>
+                      <li><a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-twitter" href="http://twitter.com/" target="_blank"><i class='bx bxl-twitter bx-tada bx-flip-horizontal' style='color:#2416d3' ></i></a></li>
+                      <li><a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-instagram" href="http://instagram.com/" target="_blank"><i class='bx bxl-instagram bx-flip-horizontal bx-tada' style='color:#d33416'  ></i></a></li>
+                      <li><a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-pinterest" href="http://telegram.com" target="_blank"><i class='bx bxl-telegram bx-flip-horizontal bx-tada' style='color:#2416d3'  ></i></a> </li>
+                      <li> <a class="trackme" data-tracking-category="Footer" data-tracking-action="clic" data-tracking-label="Link-picto-youtube" href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube bx-tada bx-flip-horizontal' style='color:#d33416' ></i></a></li>
+                  </ul>		
+          </div>
+      </div>
+      </div>
+
+  {% endblock %}
+<!--
+<span class="border border-primary-subtle">livre2</span>
+ <span class="border border-secondary">livre3</span>
+<span class="border border-secondary-subtle">livre4</span>
+<span class="border border-success">livre5</span>
+<span class="border border-success-subtle">livre6</span>
+<span class="border border-danger">livre7</span>
+<span class="border border-danger-subtle">livre8</span>
+<span class="border border-warning">livre9</span>
+<span class="border border-warning-subtle">livre10</span>
+<span class="border border-info">livre11</span>
+<span class="border border-info-subtle">livre11</span>
+<span class="border border-light">livre11</span>
+<span class="border border-light-subtle">livre11</span>
+<span class="border border-dark">livre11</span>
+<span class="border border-dark-subtle">livre11</span>
+<span class="border border-black">livre11</span>
+<span class="border border-white">livre11</span>
+-->     
+
+
+
+   
+

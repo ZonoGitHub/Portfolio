@@ -1,0 +1,27 @@
+{% extends "base2.html" %}*
+{% load static %}
+{% block content %}
+<div class="container mb-5 " style="width: 40%;  box-shadow: 5px 5px 5px 5px burlywood; ">
+        <div class = "col mb-5 shadow text-center">
+            <h5 class="mb-5" style="color: rgb(240, 240, 245); ">Ajouter un nouveau livre</h5>   
+          <form  method="POST"  enctype="multipart/form-data">
+           {% csrf_token %}
+           <div class=" text-light m-3 " style="width: 50%;" >Categorie : {{form.categorie }}</div>
+           <div class="  text-light m-3 " > Titre : {{ form.titre }}</div>
+           <div class="  text-light m-3"  >Auteur : {{ form.auteur }}</div>
+           <div class="  text-light m-3"  >Prix: {{ form.prix }}</div>
+           <div  class=" text-light m-3" style="height: 100px; overflow: hidden;" >Description Du Livre : <p class="d-inline" style="width: 50px;overflow: hidden;"> {{ form.description }} </p></div>
+           <div class="text-light m-3"  >Cover:{{ form.couverture }}</div>
+           <div class="text-light m-3" > PDF: {{ form.pdf }}</div>
+
+            {% for error in field.errors %}
+            <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+            
+           <div class="float-right mb-5">
+           <button type="submit" class="btn btn-primary ">Ajouter</button>  
+          </div> 
+         </form>
+        </div>
+</div>
+{% endblock %}
