@@ -90,7 +90,7 @@ class Commande(models.Model):
         return f"Commande du livre: {self.livre.titre} par {self.utilisateur.username}"
     
 class Commande_special(models.Model):
-    nom_prenom = models.CharField(max_length=255, blank=True, null=True)
+    nom_prenom = models.CharField(blank=True, null=True)
     utilisateur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     livre_titre = models.CharField(null=True)
     livre_auteur = models.CharField(null=True)
